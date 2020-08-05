@@ -15,7 +15,11 @@ struct Person: Identifiable {
     let phone: String
     let email: String
     
+    var fullName: String {
+        return firstName + " " + lastName
+    }
+    
     var id: String {
-        return firstName + lastName + phone + email
+        return lastName
     }
 }

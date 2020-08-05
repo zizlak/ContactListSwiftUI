@@ -10,12 +10,16 @@ import SwiftUI
 
 struct DetailList: View {
     let personList: [Person]
-    
+
     var body: some View {
-        NavigationView{
-            List(personList) {
-                person in
-                Cell(person: person)
+        NavigationView {
+            List {
+                ForEach(personList) { person in
+                    Section(header: Text(person.fullName)) {
+                        Text("phone: " + person.phone)
+                        Text("email: " + person.email)
+                    }
+                }
             }.navigationBarTitle("Persons Detailed List")
         }
     }

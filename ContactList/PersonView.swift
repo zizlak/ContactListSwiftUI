@@ -13,11 +13,11 @@ struct PersonView: View {
     
     var body: some View {
         VStack {
-            Text(person.firstName + " " + person.lastName)
+            Text(person.fullName)
             Text("Phone Number: " + person.phone)
             Text("E-Mail: " + person.email)
         }
-        .navigationBarTitle(person.firstName + " " + person.lastName)
+        .navigationBarTitle(person.fullName)
     }
 }
 
