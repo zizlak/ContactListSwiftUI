@@ -16,12 +16,12 @@ struct Cell: View {
         VStack{
             
             List {
-                Section (header: Text(person.lastName + " " + person.lastName)) {
+                Section (header: Text(person.firstName + " " + person.lastName)) {
                     Text("phone: " + person.phone)
                     Text("email: " + person.email)
                 }
             }
-            .frame(height: 140, alignment: .leading)
+            .frame(height: 110, alignment: .leading)
         }
     }
 }
